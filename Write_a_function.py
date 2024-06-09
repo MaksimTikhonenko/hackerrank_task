@@ -23,14 +23,18 @@
 #
 # Функція повинна повертати логічне значення (True/False). Вивід обробляється наданим кодом.
 
+
 def is_leap(year):
     leap = False
 
 # Write your logic here
-    if year % 4 == 0:
+    if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
         leap = True
     return leap
 
 
-year = int(1990)
+year = int(2100)
 print(is_leap(year))
+
+
+#  Test case 1: input 2100 output False

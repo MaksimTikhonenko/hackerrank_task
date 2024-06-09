@@ -25,6 +25,7 @@
 
 n = int(5)
 
+
 def str_int(values):
     i = 1
     x = []
@@ -32,5 +33,6 @@ def str_int(values):
         x.append(str(i).replace('', ''))
         i = i + 1
     print(''.join(x))
+
 
 str_int(n)

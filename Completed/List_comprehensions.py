@@ -41,16 +41,30 @@
 # [i,j,k] = [[0,0,0], [0,0,1], [0,1,0], [0,1,1], [1,0,0], [1,0,1], [1,1,0], [1,1,1]].
 # Видаліть усі масиви, сума яких дорівнює n = 2, щоб залишити лише дійсні перестановки.
 
-x = 1
-y = 1
-z = 2
-n = 3
+# x = 1
+# y = 1
+# z = 2
+# n = 3
+#
+#
+# def generate_coordinates(x0, y0, z0, n0):
+#     coordinates = [[i, j, k] for i in range(x0 + 1) for j in range(y0 + 1) for k in range(z0 + 1) if i + j + k != n0]
+#     return coordinates
+#
+#
+# result = generate_coordinates(x, y, z, n)
+# print(result)
 
 
-def generate_coordinates(x0, y0, z0, n0):
-    coordinates = [[i, j, k] for i in range(x0 + 1) for j in range(y0 + 1) for k in range(z0 + 1) if i + j + k != n0]
-    return coordinates
+q = 1
+w = 1
+e = 2
+r = 3
 
 
-result = generate_coordinates(x, y, z, n)
+def generet_coordenat(x, z, y, n):
+    coordenats = [[q, w, e] for q in range(x + 1) for w in range(z + 1) for e in range(y + 1) if q + w + e != n]
+    return coordenats
+
+result = generet_coordenat(q, w, e, r)
 print(result)
