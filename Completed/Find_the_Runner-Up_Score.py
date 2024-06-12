@@ -11,6 +11,36 @@
 # Формат виводу
 # Роздрукуйте рахунок, який посів друге місце.
 
+# sample input
+# 5
+# 2 3 6 6 5
+
+# sample output
+# 5
+
+# Даний список [2, 3, 6, 6, 5]. Максимальний бал – 6,
+# другий максимум – 5. Тому ми друкуємо 5 як другий бал.
 
 
+n = int(5)  # Це кількість балів (елементів) у списку
+arr = [2, 3, 6, 6, 5]
 
+
+def sort_sports_day(x):
+    set_list = set(x)
+    norm_list = list(set_list)
+    sort_list = sorted(norm_list, reverse=True)
+    second_max_val = sort_list[1]
+    print(second_max_val)
+
+sort_sports_day(arr)
+
+
+def sort_s_day(input_list):
+    dict_list = dict.fromkeys(input_list)
+    norm_list = list(dict_list)
+    sort_list = sorted(norm_list)
+    second_max_val = sort_list[-2]
+    print(second_max_val)
+
+sort_s_day(arr)
