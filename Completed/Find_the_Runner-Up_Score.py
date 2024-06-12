@@ -44,3 +44,16 @@ def sort_s_day(input_list):
     print(second_max_val)
 
 sort_s_day(arr)
+
+
+def new_sort_s_day(input_list):
+    lst = []
+    for el in input_list:
+        if el not in lst:
+            lst.append(el)
+    sort_list = sorted(lst)
+
+    second_max_val = sort_list[-2]
+    print(second_max_val)
+
+new_sort_s_day(arr)
