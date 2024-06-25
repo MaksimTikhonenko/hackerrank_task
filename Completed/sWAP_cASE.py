@@ -36,6 +36,6 @@ def swap_case(s):
     return res
 
 
-s = input()
-result = swap_case(s)
+a = input()
+result = swap_case(a)
 print(result)
