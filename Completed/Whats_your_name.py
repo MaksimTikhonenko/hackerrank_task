@@ -27,13 +27,13 @@
 
 
 def print_full_name(first, last):
-    result = "Hello " + str(first) + " " + str(last) + "!" + " " + "You just delved into python."
+    result = f"Hello {first} {last}! You just delved into python."
     string = str(result)
-    return string
+    print(string)
 
 
 first_name = input("Введіть ім'я: ")
 last_name = input("Введіть прізвище: ")
 
 
-print(print_full_name(first_name, last_name))
+print_full_name(first_name, last_name)
