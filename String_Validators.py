@@ -37,3 +37,8 @@ string_validator_cb(inputs, lambda x: x.islower())
 string_validator_cb(inputs, lambda x: x.isupper())
 
 # TODO: Переписати код по прикладу!!!!
+
+
+def str_validator_pro(input_str):
+    test = []
+
