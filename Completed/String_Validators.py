@@ -17,28 +17,44 @@
 # У п’ятому рядку виведіть True, якщо є якісь символи верхнього регістру. В іншому випадку виведіть False.
 
 
-def string_validator_cb(input_str, test_cb):
-    # ch - character
-    for ch in input_str:
-        if test_cb(ch):
-            print(True)
-            return
-
-    print(False)
-
-
-inputs = input("Enter string: ")
-
-
-string_validator_cb(inputs, lambda x: x.isalnum())
-string_validator_cb(inputs, lambda x: x.isalpha())
-string_validator_cb(inputs, lambda x: x.isdigit())
-string_validator_cb(inputs, lambda x: x.islower())
-string_validator_cb(inputs, lambda x: x.isupper())
+# def string_validator_cb(input_str, test_cb):
+#     # ch - character
+#     for ch in input_str:
+#         if test_cb(ch):
+#             print(True)
+#             return
+#
+#     print(False)
+#
+#
+# inputs = input("Enter string: ")
+#
+#
+# string_validator_cb(inputs, lambda x: x.isalnum())
+# string_validator_cb(inputs, lambda x: x.isalpha())
+# string_validator_cb(inputs, lambda x: x.isdigit())
+# string_validator_cb(inputs, lambda x: x.islower())
+# string_validator_cb(inputs, lambda x: x.isupper())
 
 # TODO: Переписати код по прикладу!!!!
 
 
 def str_validator_pro(input_str):
-    test = []
+    tests = [lambda x: x.isalnum(),
+             lambda x: x.isalpha(),
+             lambda x: x.isdigit(),
+             lambda x: x.islower(),
+             lambda x: x.isupper()
+             ]
+    result = [False] * len(tests)
 
+    for ch in input_str:
+        for tests_inx in range(0, len(tests)):
+            result[tests_inx] = result[tests_inx] or tests[tests_inx](ch)
+
+    for r in result:
+        print(r)
+    print(f"{len(result)} results")
+
+
+str_validator_pro('q2A87sdjlfnJFJKF^@#(')
