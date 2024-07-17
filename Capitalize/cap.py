@@ -14,4 +14,3 @@ def solve(s):
                 result += word[idx]
         result += ' '
     return result[:-1]
-
