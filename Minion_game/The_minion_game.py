@@ -61,12 +61,22 @@ def minion_game(st):
         if el is vowels:
             b = b + 1
 
+# todo-----------------------
     # Вивести і'мя переможця
     # if res_kevin > res_stuart:
     #     print('Kevin' res_kevin)
+    #     if res_kevin == res_stuart
+    #          print('Draw')
     # else:
     #     print('Stuart' res_stuart)
 
+
+# sub_kevin = build_substring(s)
+# sub_stuart = build_substring(s)
+#
+# res_kevin = calculate_score(sub_kevin, filter_kevin)
+# res_stuart = calculate_score(sub_stuart, filter_kevin)
+# todo-------------------------------
 
 s = 'BANANA'
 minion_game(s)
@@ -103,4 +113,8 @@ def build_substring(input_word):
 print(calculate_score('BAN', ['B', 'BA', 'BAN', 'A', 'AN', 'N'], filter_stuart))
 
 
-
+# sub_kevin = build_substring(s)
+# sub_stuart = build_substring(s)
+#
+# res_kevin = calculate_score(sub_kevin, filter_kevin)
+# res_stuart = calculate_score(sub_stuart, filter_kevin)
