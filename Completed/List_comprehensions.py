@@ -66,5 +66,6 @@ def generet_coordenat(x, z, y, n):
     coordenats = [[q, w, e] for q in range(x + 1) for w in range(z + 1) for e in range(y + 1) if q + w + e != n]
     return coordenats
 
+
 result = generet_coordenat(q, w, e, r)
 print(result)

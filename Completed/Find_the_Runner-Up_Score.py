@@ -33,6 +33,7 @@ def sort_sports_day(x):
     second_max_val = sort_list[1]
     print(second_max_val)
 
+
 sort_sports_day(arr)
 
 
@@ -42,6 +43,7 @@ def sort_s_day(input_list):
     sort_list = sorted(norm_list)
     second_max_val = sort_list[-2]
     print(second_max_val)
+
 
 sort_s_day(arr)
 
@@ -55,5 +57,6 @@ def new_sort_s_day(input_list):
 
     second_max_val = sort_list[-2]
     print(second_max_val)
+
 
 new_sort_s_day(arr)
