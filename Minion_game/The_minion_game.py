@@ -87,10 +87,10 @@ filter_stuart = lambda x: x[0] not in 'AEIOUaeiou'
 filter_kevin = lambda x: x[0] in 'AEIOUaeiou'
 
 
-def calculate_score(substrings, condition):
+def calculate_score(input_str, substrings, condition):
     result = 0
-    i = list(filter(condition, substrings))
-    for _ in i:
+    input_str = list(filter(condition, substrings))
+    for _ in input_str:
         result = result + 1
     return result
 
@@ -110,7 +110,7 @@ def build_substring(input_word):
 
 
 # print(build_substring('BAN'))
-print(calculate_score('BAN', ['B', 'BA', 'BAN', 'A', 'AN', 'N'], filter_stuart))
+# print(calculate_score('BAN', ['B', 'BA', 'BAN', 'A', 'AN', 'N'], filter_stuart))
 
 
 # sub_kevin = build_substring(s)
