@@ -110,7 +110,7 @@ def build_substring(input_word):
 
 
 # print(build_substring('BAN'))
-print(calculate_score('BAN', ['B', 'BA', 'BAN', 'A', 'AN', 'N'], filter_stuart))
+print(calculate_score(['B', 'BA', 'BAN', 'A', 'AN', 'N'], filter_stuart))
 
 
 # sub_kevin = build_substring(s)
