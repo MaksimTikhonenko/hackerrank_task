@@ -1,4 +1,4 @@
-#
+
 # Кевін та Стюарт хочуть зіграти в "Гру Міньйонів".
 # Правила гри:
 #
@@ -37,80 +37,33 @@
 # Stuart 12
 
 
-def build_substring(input_word):
-    result = []
-    l_n = len(input_word)
+def count_words(input_word):
+    len_input = len(input_word)
+    stuart_score = 0
+    kevin_score = 0
+    for idx in range(len_input):
+        current_letter = input_word[idx]
+        words_count = len_input - idx
+        if current_letter[0] in {'A', 'E', 'I', 'O', 'U'}:
+            kevin_score += words_count
+        else:
+            stuart_score += words_count
 
-    for el in range(l_n):
-        for ele in range(el, l_n):
-            result.append(input_word[el:ele + 1])
-
-    return result
-
-
-def calculate_score(substrings, condition):
-    result = 0
-    # if substrings != str():
-    #     print("substrings no good")
-    i = list(filter(condition, substrings))
-    for _ in i:
-        result = result + 1
-    return result
+    return stuart_score, kevin_score
 
 
 def minion_game(st):
-    sub = build_substring(st)
-
-    filter_stuart = lambda x: x[0] not in 'AEIOUaeiou'
-    filter_kevin = lambda x: x[0] in 'AEIOUaeiou'
-
-    res_kevin = calculate_score(sub, filter_kevin)
-    res_stuart = calculate_score(sub, filter_stuart)
-
-    # Порівняти Stuart\Kevin Вивести і'мя переможця
+    res_stuart, res_kevin = count_words(st)
 
     if res_kevin > res_stuart:
-        result = ('Kevin', res_kevin)
+        result = 'Kevin ' + str(res_kevin)
     elif res_kevin == res_stuart:
         result = 'Draw'
     else:
-        result = ('Stuart', res_stuart)
-    return print(result)
+        result = 'Stuart ' + str(res_stuart)
+    print(result)
+    return result
 
 
 s = 'BANANA'
 minion_game(s)
-
-
-# -------------------------------
-#
-# filter_stuart = lambda x: x[0] not in 'AEIOUaeiou'
-# filter_kevin = lambda x: x[0] in 'AEIOUaeiou'
-#
-#
-# def calculate_score(substrings, condition):
-#     result = 0
-#     # if substrings != str():
-#     #     print("substrings no good")
-#     i = list(filter(condition, substrings))
-#     for _ in i:
-#         result = result + 1
-#     return result
-#
-#
-# # -------------------------------
-#
-#
-# def build_substring(input_word):
-#     result = []
-#     l_n = len(input_word)
-#
-#     for el in range(l_n):
-#         for ele in range(el, l_n):
-#             result.append(input_word[el:ele + 1])
-#
-#     return result
-#
-
-# print(build_substring('BAN'))
-# print(calculate_score(['B', 12, 'BA', 'BAN', 'A', 'AN', -4, 'N'], filter_stuart))
